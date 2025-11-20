@@ -181,13 +181,13 @@ def analyze_scores(
         merged["进退步差值"] = merged["上次百分比"] - merged["本次百分比"]
 
         def judge_direction(delta: float) -> str:
-            # delta = 本次百分比 - 上次百分比
-            # 百分比越小越好，因此：
-            #  delta <= -threshold -> 进步
-            #  delta >= +threshold -> 退步
-            if delta <= -threshold:
+            # delta = 上次百分比 - 本次百分比
+            # 百分比越大越好，因此：
+            #  delta >= -threshold -> 进步
+            #  delta <= +threshold -> 退步
+            if delta >= -threshold:
                 return f"进步>{int(threshold*100)}%"
-            elif delta >= threshold:
+            elif delta <= threshold:
                 return f"退步>{int(threshold*100)}%"
             else:
                 return ""
