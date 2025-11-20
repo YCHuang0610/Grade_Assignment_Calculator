@@ -6,7 +6,7 @@
 
 默认的等级折算赋分方案为北京市高考五等21级赋分表：
 
-<img src="fufen.webp" alt="fufen" style="zoom:50%;" />
+<img src="fufen.webp" alt="fufen" style="zoom:20%;" />
 
 如需其他赋分方案，可修改等级折算赋分方案中的数据。
 
@@ -85,7 +85,7 @@ python CompareScore.py --file-prev 月考.xlsx --file-curr 期中.xlsx --thresho
 ## 注意
 - 若原始表中班级或姓名列显示为 `Unnamed: 0` / `Unnamed: 1`，脚本会自动重命名为 `班级` / `姓名`。
 - 若总分排名列名称与默认不一致，请在 `CompareScore.py` 中调整 `prev_rank_cols` / `curr_rank_cols` 的映射。
-- 百分比 = 排名 / 该科有效总人数；百分比下降视为进步。
+- 百分比 = 排名 / 该科有效总人数，百分比下降视为进步，但为鼓励学生，进步者差值表示为正值。
 
 ## 许可
 个人学习与教学辅助使用，禁止用于商业收费。
