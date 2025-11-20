@@ -1,1 +1,6 @@
 .DS_Store
+*.xls
+*.xlsx
+
+!成绩对比模板.xlsx
+!等级折算赋分方案.xlsx
